@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Witchy's Inventions</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      background-color: #ffffff;
+      font-family: "Times New Roman", Times, serif;
+      color: #000000;
+      text-align: center;
+    }
+
+    .page-wrapper {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      gap: 10px;
+    }
+
+    /* ── Logo ── */
+    .site-logo {
+      display: block;
+      height: 40vh;
+      max-height: 300px;
+      width: auto;
+    }
+
+    /* ── Title ── */
+    .site-title {
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .site-subheader {
+      font-style: italic;
+      font-weight: normal;
+      font-size: 15px;
+    }
+
+    /* ── Contact ── */
+    .contact-section {
+      margin-top: 4px;
+    }
+
+    .contact-label {
+      font-size: 14px;
+      color: #555555;
+      margin-bottom: 4px;
+    }
+
+    .contact-email {
+      font-size: 15px;
+      font-family: "Courier New", Courier, monospace;
+      letter-spacing: 1px;
+    }
+
+    .contact-email a {
+      color: #000000;
+      text-decoration: underline;
+    }
+
+    .contact-email a:hover {
+      color: #555555;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      margin-top: 8px;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #cccccc;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0; }
+    }
+    .blink {
+      animation: blink 1.2s step-start infinite;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- Logo -->
+    <img src="witchylogo.png" alt="Witchy's Inventions Logo" class="site-logo">
+
+    <!-- Subheader -->
+    <div class="site-subheader">&ldquo;The Future is Witchy's!&rdquo;</div>
+
+    <!-- Contact -->
+    <div class="contact-section">
+      <div class="contact-email">
+        <img src="email_gif.gif" alt="email" width="28" style="vertical-align: middle; margin-right: 6px;"><a href="mailto:talk2witchy@aol.com">talk2witchy@aol.com</a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      &copy; 2026
+    </div>
+
+  </div>
+
+</body>
+</html>
