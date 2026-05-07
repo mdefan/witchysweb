@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Witchy's Inventions</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+ 
+    html, body {
+      min-height: 100%;
+      background-color: #ffffff;
+      font-family: "Times New Roman", Times, serif;
+      color: #000000;
+    }
+ 
+    .nav {
+      position: fixed;
+      top: 16px;
+      right: 20px;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+ 
+    .nav a {
+      color: #0000EE;
+      text-decoration: none;
+      border-bottom: 1px solid #0000EE;
+    }
+ 
+    .nav a:hover {
+      color: #0000AA;
+      border-bottom-color: #0000AA;
+    }
+ 
+    .page-wrapper {
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 60px 20px 60px;
+    }
+ 
+    /* ── Card with SVG squiggly border ── */
+    .card {
+      position: relative;
+      padding: 32px 28px;
+      margin-top: 20px;
+    }
+ 
+    /* ── Squiggly SVG border ── */
+    .squiggle-border {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      pointer-events: none;
+    }
+ 
+    .squiggle-border rect {
+      fill: none;
+      stroke: #000000;
+      stroke-width: 2;
+      filter: url(#squiggle);
+    }
+ 
+    @keyframes squiggle {
+      0%   { filter: url(#squiggle0); }
+      25%  { filter: url(#squiggle1); }
+      50%  { filter: url(#squiggle2); }
+      75%  { filter: url(#squiggle3); }
+      100% { filter: url(#squiggle0); }
+    }
+ 
+    .squiggle-border rect {
+      animation: squiggle 0.5s linear infinite;
+    }
+ 
+    .about-title {
+      font-size: 13px;
+      font-family: "Courier New", Courier, monospace;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+ 
+    .about-logo {
+      display: block;
+      width: 100px;
+      margin: 0 auto 24px;
+    }
+ 
+    .about-text {
+      font-size: 15px;
+      line-height: 1.8;
+      text-align: left;
+    }
+ 
+    .about-text p {
+      margin-bottom: 16px;
+    }
+ 
+    .about-text .signoff {
+      margin-top: 24px;
+      font-style: italic;
+      font-size: 14px;
+    }
+ 
+    .doodle {
+      position: absolute;
+      font-size: 18px;
+      line-height: 1;
+    }
+    .doodle.tl { top: -12px; left: -12px; }
+    .doodle.tr { top: -12px; right: -12px; }
+    .doodle.bl { bottom: -12px; left: -12px; }
+    .doodle.br { bottom: -12px; right: -12px; }
+ 
+    .footer {
+      margin-top: 32px;
+      text-align: center;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #cccccc;
+      font-family: "Courier New", Courier, monospace;
+    }
+  </style>
+</head>
+<body>
+ 
+  <!-- Squiggly filter definitions with shifting seeds -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <filter id="squiggle0" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="1" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <filter id="squiggle1" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="5" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <filter id="squiggle2" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="10" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <filter id="squiggle3" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="15" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
+ 
+  <div class="nav"><a href="index.html">Home</a></div>
+ 
+  <div class="page-wrapper">
+ 
+    <div class="card">
+ 
+      <!-- Squiggly animated border -->
+      <svg class="squiggle-border" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="2" width="calc(100% - 4px)" height="calc(100% - 4px)" rx="2"/>
+      </svg>
+ 
+ 
+ 
+      <div class="about-title">About Us</div>
+ 
+      <img src="Witchy.png" alt="The real Witchy" style="display:block; width:200px; margin: 0 auto 24px; border-radius: 2px;">
+ 
+      <div class="about-text">
+        <p>Welcome to Witchy's Inventions!</p>
+        <p>So you're probably wondering... who is Witchy?</p>
+        <p>Witchy was a stray we used to take care of. We called him Witchy because, well... he looked SO witchy! The biggest cat we ever laid eyes on, built like an ABSOLUTE UNIT! One day he quit visiting us, but he's left a lasting impression on all of us.</p>
+        <p>Anyways, we're a ragtag group of designers and engineers on a mission to change the world. So stick around and follow us as we embark on our journey. It's gonna be one h*ck of a ride!</p>
+        <p class="signoff">The Witchy's Inventions Crew</p>
+      </div>
+    </div>
+ 
+    <div class="footer">&copy; 2026 witchy's inventions</div>
+ 
+  </div>
+ 
+  <script>
+    // Dynamically set SVG rect to fill the card
+    function fitBorder() {
+      const card = document.querySelector('.card');
+      const svg = card.querySelector('.squiggle-border');
+      const rect = svg.querySelector('rect');
+      const w = card.offsetWidth;
+      const h = card.offsetHeight;
+      svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
+      rect.setAttribute('width', w - 4);
+      rect.setAttribute('height', h - 4);
+    }
+    window.addEventListener('load', fitBorder);
+    window.addEventListener('resize', fitBorder);
+  </script>
+ 
+</body>
+</html>
